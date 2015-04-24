@@ -1,0 +1,54 @@
+<div class="section">
+	<h2>About</h2>
+	<div class="section-body">
+		<p>MALgraph is an extension of your <a target="_blank" href="http://myanimelist.net/">MyAnimeList</a> profile, serving you various information about your data&nbsp;&ndash;&nbsp;rating distribution, favorite studios, personalized recommendations, and a lot more.</p>
+	</div>
+</div>
+
+<div class="section">
+	<h2>History</h2>
+	<div class="section-body">
+		<p>MALgraph started as a basic, minimalistic page with black bars (<a target="_blank" href="<?php echo UrlHelper::absoluteUrl('/media/img/history1.png') ?>">version one</a>), and quickly evolved to a full-fledged MAL data parser, a bit richer in colors (<a target="_blank" href="<?php echo UrlHelper::absoluteUrl('/media/img/history2.png') ?>">version two</a>). At some point we realized it had too much information to be shown in a single cluster, so we decided to split it into tabs, thus creating Mg3.</p>
+		<p>Continuing the tradition of writing 95% of the code from scratch, Mg4 has been born, with cleaner interface free from clutter and new features suggested by users in <a target="_blank" href="http://myanimelist.net/clubs.php?cid=30017">our&nbsp;club</a>. Even if there aren&rsquo;t many changes visible in the outer layer, the whole engine has been replaced, and a new queuing system has been put to work.</p>
+	</div>
+</div>
+
+<div class="section">
+	<h2>Cogs of the machine</h2>
+	<div class="section-body">
+		<ul>
+			<li><a target="_blank" href="http://jquery.com/">jQuery</a>&nbsp;&ndash; because site would be too lightweight without those 15KB.</li>
+			<li><a target="_blank" href="http://www.highcharts.com/">Highcharts</a>&nbsp;&ndash; cool interactive charts.</li>
+			<li><a target="_blank" href="http://tablesorter.com/">Tablesorter</a>&nbsp;&ndash; nice jQuery plugin that tidies your table up.</li>
+			<li><a target="_blank" href="https://github.com/mattfarina/farbtastic">Farbtastic</a>&nbsp;&ndash; color picker used in ratings export.</li>
+			<li><a target="_blank" href="http://sqlite.org/">SQLite</a>&nbsp;&ndash; we can&rsquo;t afford real database, so we&rsquo;re using file-driven one.</li>
+			<li><a target="_blank" href="http://www.redbeanphp.com/">RedBeanPHP</a>&nbsp;&ndash; we needed ORM (only to write raw SQL later).</li>
+			<li><a target="_blank" href="http://php.net/">PHP 5.5</a>&nbsp;&ndash; because we like it. At least <a href="https://github.com/rr-/">rr-</a> does.</li>
+		</ul>
+	</div>
+</div>
+
+<div class="section">
+	<h2>Contact and external links</h2>
+	<div class="section-body">
+		<p>You can send us a message at <?= EmailObfuscator::embedJavascript(Config::$mail) ?>, or find more info at:</p>
+		<ul>
+			<li><a target="_blank" href="http://myanimelist.net/clubs.php?cid=30017">MALgraph club on MAL</a>&nbsp;&ndash; a place for questions or bug reports.</li>
+			<li><a target="_blank" href="http://www.google.com/moderator/#15/e=20db62&amp;t=20db62.40">Suggestions Moderator</a>&nbsp;&ndash; post and vote on feature requests!</li>
+			<li><a target="_blank" href="https://github.com/rr-/malgraph4">Source code on GitHub</a>&nbsp;&ndash; see how it works under the hood&hellip;</li>
+			<li><a target="_blank" href="https://github.com/rr-/malgraph4/wiki/Achievements">List of achievements</a>&nbsp;&ndash; complete with all descriptions.</li>
+		</ul>
+	</div>
+</div>
+
+<div class="fb-wrapper">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-href="https://www.facebook.com/MALgraph" data-send="false" data-width="450" data-show-faces="true"></div>
+</div>

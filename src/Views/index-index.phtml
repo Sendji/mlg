@@ -1,0 +1,81 @@
+<div id="showcase">
+	<nav>
+		<ul>
+			<li>
+				<a href="#">
+					<i class="icon-mg"></i>
+					<span>View numerous stats for <strong>anime and manga</strong></span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="icon-suggestions"></i>
+					<span>Get personalized <strong>recommendations</strong></span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="icon-achievements"></i>
+					<span>Earn <strong>achievements</strong> based on your list</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="icon-globals"></i>
+					<span>Compare your data with <strong>global stats</strong></span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="tab-wrapper">
+		<div class="tab">
+			<img src="<?php echo UrlHelper::absoluteUrl('/media/img/logo-huge.png') ?>" alt="MALgraph">
+			<p>MALgraph is an extension of your MyAnimeList profile, serving you various stats about your anime and&nbsp;manga.</p>
+		</div>
+
+		<div class="tab">
+			<img class="screenshot" src="<?php echo UrlHelper::absoluteUrl('/media/img/showcase-2.png') ?>" alt="Recommendations">
+			<p>Get recommendations based on your ratings and&nbsp;check related titles you might have missed.</p>
+		</div>
+
+		<div class="tab">
+			<img class="screenshot" src="<?php echo UrlHelper::absoluteUrl('/media/img/showcase-3.png') ?>" alt="Achievements">
+			<p>Doing something big, like watching 100 mecha anime, will earn you a badge. All your friends will envy you!</p>
+		</div>
+
+		<div class="tab">
+			<img class="screenshot" src="<?php echo UrlHelper::absoluteUrl('/media/img/showcase-4.png') ?>" alt="Global statistics">
+			<p>See how your mean score compares to other users&rsquo;, check how many more manga is there for you to read.</p>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+</div>
+
+<div id="start">
+	<form class="waitable search" action="<?php echo IndexControllerSearchModule::url() ?>" method="post">
+		<div class="control-group">
+			<label for="mp-search">Start here:</label>
+			<input type="search" name="user-name" placeholder="your MAL username" id="mp-search">
+			<span>or <a href="<?php echo UserControllerProfileModule::url(mt_rand() % 2 == 0 ? 'fri' : 'rr-') ?>">load an example profile</a>.</span>
+		</div>
+	</form>
+</div>
+
+<footer>
+	<ul class="horizontal">
+		<li>
+			<a class="waitable" href="https://github.com/rr-/malgraph4/releases">Version <?php echo Config::$version ?></a>
+		</li>
+		<li>
+			<a class="waitable" href="<?php echo IndexControllerAboutModule::url() ?>">About MALgraph</a>
+		</li>
+		<li>
+			<a class="waitable" href="<?php echo IndexControllerPrivacyModule::url() ?>">Privacy policy</a>
+		</li>
+		<li>
+			<a class="waitable" href="<?php echo IndexControllerGlobalsModule::url() ?>">Global stats</a>
+		</li>
+	</ul>
+</footer>
